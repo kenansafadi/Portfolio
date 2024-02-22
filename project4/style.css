@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.img-container {
+    display: flex;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70vh;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../path101/Path\ 15.png");
+
+}
+
+.img-container h1,
+p {
+
+    z-index: 1;
+    direction: rtl;
+
+
+}
+
+.img-container h1 {
+    margin-top: 1.2em;
+    color: #D3E10E;
+    font: normal normal bold 86px/113px Assistant;
+
+}
+
+.img-container p {
+    color: #F9F9F9;
+    font: normal normal normal 20px/26px Assistant;
+    margin-top: 1.5em;
+    opacity: 0.8;
+}
+
+.container-form {
+    direction: rtl;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 1em;
+    margin: 3em;
+}
+
+.user-container,
+.email-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: end; */
+    /* Adjust as needed */
+}
+
+.container-form input,
+.user-container input,
+.email-container input {
+
+    border: none;
+}
+
+.user-container input,
+.email-container input {
+    width: 20vw;
+    height: 5vh;
+    background-color: #F6F6F6;
+    border-bottom: 2px solid #D3E10E;
+}
+
+.user-container label,
+.email-container label {
+    font: normal normal bold 16px/21px Assistant;
+    color: #011560;
+}
+
+.container-form input[type=submit] {
+    width: 10vw;
+    height: 5vh;
+    font: normal normal bold 22px/30px Assistant;
+    color: #011560;
+    background-color: #D3E10E;
+}
+
+@media(max-width:480px) {
+    .img-container {
+        height: 60vh;
+        text-align: center;
+
+    }
+
+    .img-container h1 {
+        font-size: 1.8em;
+        height: 25%;
+        text-align: center;
+    }
+
+    .img-container p {
+        font-size: 1em;
+        width: 75%;
+        /* text-align: justify; */
+    }
+
+    .container-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+    }
+
+    .user-container input,
+    .email-container input,
+    .container-form input[type=submit] {
+        width: 80vw;
+    }
+
+
+    .user-container label,
+    .email-container label {
+        font-size: 1em;
+    }
+
+}
+
+@media(min-height:730px) {
+    .img-container {
+        height: 45%;
+    }
+
+    .img-container h1 {
+        height: 20%;
+    }
+}
+
+@media(max-width:300px) {
+
+
+    .img-container h1 {
+        font-size: 1.4em;
+    }
+}

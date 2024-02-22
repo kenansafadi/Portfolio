@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Heebo", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  height: 40vh;
+  background-color: #0EE1E1;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#text-container {
+  width: 40%;
+  height: 50%;
+  display: grid;
+  place-items: center;
+  direction: rtl;
+  justify-content: center;
+  margin-left: 3em;
+}
+
+#text-container > h1,
+p {
+  margin: 0;
+  justify-self: start;
+  align-items: start;
+}
+
+#text-container > p {
+  font: normal normal normal 20px/29px Heebo;
+  margin-top: 0.5em;
+  padding: 0.2em;
+  opacity: 1;
+  line-height: 1.5;
+}
+
+#box-img {
+  margin-right: 4em;
+  width: 45%;
+  height: 42.12%;
+}
+
+.icon-container {
+  background-color: aliceblue;
+  padding: 0.8em;
+  border-radius: 50%;
+  width: 4.2em;
+  height: 4.2em;
+  margin-right: 20em;
+  margin-bottom: 8em;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#icon-link img {
+  width: 2.6em;
+  height: 2.6em;
+}
+
+.info-container {
+  display: grid;
+  grid-template-areas: "form map";
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 80vh;
+  margin-top: 2%;
+}
+
+.map-container {
+  grid-area: map;
+  background-color: #0EE1E1;
+  width: 55vw;
+  height: 100%;
+  display: flex;
+  border-radius: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container iframe {
+  width: 95%;
+  height: 90%;
+  margin: 0 auto;
+}
+
+.form-container {
+  grid-area: form;
+  border-radius: 2em;
+  background-color: #F0FFFF;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-text {
+  direction: rtl;
+  line-height: 1.5;
+}
+
+.contact-text h2 {
+  font-weight: 900;
+  font-size: 46px;
+  margin-bottom: 5px;
+}
+
+.myform {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1.2em;
+  direction: rtl;
+  width: 70%;
+}
+
+.myform .field {
+  font-family: Heebo, sans-serif;
+  font-size: 16px;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.myform > input[type=text],
+.myform > input[type=email],
+.myform textarea#free-text {
+  width: 100%;
+  border: none;
+  background-color: #E5EEFF;
+  margin-bottom: 2%;
+  border-bottom: 0.2em solid #0EE1E1;
+}
+
+.myform > input[type=text],
+.myform > input[type=email] {
+  max-width: 30em;
+  height: 2.8em;
+}
+
+.myform textarea#free-text {
+  max-width: 30em;
+  height: 20vh;
+}
+
+input[type=submit] {
+  border: none;
+  background-color: #0EE1E1;
+  width: 100%;
+  max-width: 30em;
+  height: 5.43vh;
+}
+
+div.footer-container {
+  width: 100%;
+  height: 20vh;
+  background-color: white;
+  border-bottom: 0.5em solid #0EE1E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons a {
+  position: relative;
+  background-color: #0EE1E1;
+  width: 4vw;
+  height: 8vh;
+  text-align: center;
+  margin: 1em;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  position: absolute;
+  top: 50%;
+  font-size: 2em;
+  transform: translate(-50%, -50%);
+  color: #333;
+  opacity: 1;
+}
+
+.socialIcons a:hover {
+  background-color: #102958;
+  transition: 0.5s;
+}
+
+.socialIcons a i:hover {
+  color: white;
+  transition: 0.5s;
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-container {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "img" "text";
+  }
+  .icon-container {
+    display: none;
+  }
+  .img-container {
+    grid-area: img;
+    justify-self: flex-end;
+    width: 50%;
+    height: 100%;
+    margin-top: 15%;
+  }
+  #text-container {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-right: 5%;
+    align-self: flex-start;
+    align-items: flex-start;
+    width: 60%;
+  }
+  #box-img {
+    margin-left: 8em;
+    width: 40%;
+    height: 30%;
+  }
+  #text-container h1 {
+    font: normal normal 900 33px/49px Heebo;
+  }
+  #text-container p {
+    width: 100%;
+    font: normal normal normal 15px/22px Heebo;
+  }
+  .info-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 55vh;
+    height: 100vh;
+    width: 100%;
+  }
+  .map-container {
+    width: 100%;
+    height: 50vh;
+    border-radius: 0%;
+    margin-top: 5%;
+  }
+  .map-container iframe {
+    width: 80vw;
+    height: 50vh;
+  }
+  .form-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0%;
+  }
+  .myform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+  }
+  .myform > input[type=text],
+  .myform > input[type=email],
+  .myform textarea#free-text {
+    background-color: white;
+    width: 80vw;
+  }
+  .myform .field {
+    font-family: Heebo, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .contact-text h2,
+  p {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.2em;
+    width: 60%;
+  }
+  .contact-text h2 {
+    margin-right: 1em;
+    margin-top: 2em;
+    font: normal normal 900 32px/47px Heebo;
+  }
+  .contact-text p {
+    pad: 0.2em;
+    margin-right: 3em;
+    text-align: justify;
+    width: 60%;
+    font: normal normal normal 15px/22px Heebo;
+  }
+  .socialIcons a {
+    width: 15vw;
+    height: 7.5vh;
+  }
+}
+.box-container h3 {
+  font: normal normal 900 30px/44px Heebo;
+  color: #0EE1E1;
+}
+
+.box-container p {
+  font: normal normal normal 15px/22px Heebo;
+  letter-spacing: 0px;
+  color: #000000;
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.box-container .fa-solid::before,
+.box-container .fa-regular::before {
+  font-size: 2.5em;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  margin-top: 1em;
+}
+
+#box1,
+#box2,
+#box3,
+#box4 {
+  height: 30vh;
+  width: 23.44%;
+  background-color: #F8F8F8;
+  padding: 0.5em;
+  margin: 0 auto;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 1em;
+  direction: rtl;
+}
+
+@media (max-width: 480px) {
+  .box-container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  #box1,
+  #box2,
+  #box3,
+  #box4 {
+    padding: 0.2em;
+    width: 100%;
+    margin-top: 1em;
+  }
+  .box-container h3 {
+    font-size: 24px;
+  }
+  .box-container p {
+    max-width: 100%;
+    text-align: justify;
+    margin: 0 auto 3em;
+  }
+  .box-container .fa-solid::before,
+  .box-container .fa-regular::before {
+    margin-top: 2em;
+    font-size: 1.5em;
+  }
+}
+/*!
+ * Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype");
+}
+.fas,
+.fa-solid {
+  font-weight: 900;
+}
+
+/*!
+ * Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype");
+}
+.far,
+.fa-regular {
+  font-weight: 400;
+}/*# sourceMappingURL=landingPage2.css.map */

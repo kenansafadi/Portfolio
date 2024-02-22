@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+}
+
+#container-image {
+    width: 60vw;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#container-form {
+    width: 40vw;
+    direction: rtl;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10em;
+
+}
+
+.form-control {
+    display: flex;
+
+    flex-direction: column;
+    margin: 1em;
+}
+
+#container-form-title {
+    width: 60%;
+
+
+}
+
+#container-form-title>h1 {
+
+    font: normal normal 900 43px/63px Heebo;
+    color: #020253;
+    opacity: 1;
+}
+
+.form-control>label {
+    font: normal normal bold 16px/24px Heebo;
+    color: #2C2C2C;
+}
+
+
+.form-control>input {
+    width: 418px;
+    height: 50px;
+    background: #E5EEFF;
+    border: 0;
+    border-bottom: 5px solid #020253;
+}
+
+input[type=submit] {
+    width: 60%;
+    height: 50px;
+    background-color: #020253;
+    letter-spacing: 0.33px;
+    font: normal normal bold 22px/30px Heebo;
+    color: #FFFFFF;
+}
+
+#container-form-title>h1 {
+    font: normal normal bold 900 43px/63px Heebo;
+    color: #020253;
+}
+
+#container-form-title>p {
+    font: normal normal bold 20px/29px Heebo;
+    color: #020253
+}
+
+@media screen and (max-width: 480px) {
+
+    body,
+    html {
+        height: 100%;
+        /* Ensure full height */
+        margin: 0;
+        padding: 0;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center vertically */
+        justify-content: center;
+        /* Center horizontally */
+        height: 100%;
+        /* Ensure full height */
+    }
+
+    #container-image {
+        width: 100vw;
+
+    }
+
+    #container-image img {
+        height: 58vh;
+    }
+
+    #container-form {
+        width: 100%;
+        /* Ensure full width */
+        max-width: 480px;
+        /* Set maximum width for mobile */
+    }
+
+    #container-form-title {
+        text-align: center;
+        /* Center-align the title */
+    }
+
+    #container-form-title h1 {
+        font: normal normal 900 28px/41px Heebo;
+        letter-spacing: 0px;
+    }
+
+    #container-form-title p {
+        font: normal normal normal 15px/22px Heebo;
+        letter-spacing: 0px;
+    }
+
+    .form-control {
+        text-align: right;
+        /* Center-align form text and input fields */
+    }
+
+    .form-control>label {
+        font: normal normal bold 10px/14px Heebo;
+    }
+
+    .form-control>input {
+        width: 60vw;
+        /* Adjust input width for better responsiveness */
+    }
+
+    input[type=submit] {
+        font: normal normal bold 22px/30px Heebo;
+        letter-spacing: 0.33px;
+        margin-top: 1em;
+        /* Add margin-top for spacing */
+    }
+}
