@@ -144,7 +144,7 @@ input[type=submit] {
         border-style: groove;
         border-color: #D31C75;
         height: 100vh;
-        background: linear-gradient(to bottom, #efc8db, #eb4481);
+        background: linear-gradient(to bottom, #efc8db, #eee8ea);
 
 
     }
