@@ -145,3 +145,103 @@ h2 {
     text-align: right;
     font: normal normal 300 20px/29px Heebo;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: auto;
+        /* Adjust height to accommodate content */
+    }
+
+    .header {
+        height: auto;
+        /* Adjust height to accommodate content */
+        padding: 1em;
+        /* Add padding for better spacing */
+        text-align: center;
+        /* Center-align text */
+    }
+
+    .navbar ul {
+        justify-content: center;
+        /* Center-align navigation items */
+        margin-right: 0;
+        /* Remove right margin */
+    }
+
+    .navbar ul li {
+        margin-right: 1em;
+        /* Adjust spacing between navigation items */
+    }
+
+    .navbar ul li a {
+        font-size: 1em;
+    }
+
+    .elements-container {
+        position: static;
+        /* Reset positioning */
+        text-align: center;
+        /* Center-align content */
+    }
+
+    #profile-image,
+    h2 {
+        position: static;
+        /* Reset positioning */
+        margin: 0.5em auto;
+        /* Adjust margin for center alignment */
+    }
+
+    .info-container {
+        height: 50vh;
+        margin-bottom: 2em;
+        /* Adjust height to accommodate content */
+    }
+
+    .info-container>h1 {
+        font-size: 40px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .info-container>p {
+        font-size: 16px;
+        /* Adjust font size for smaller screens */
+        margin-top: 0;
+        /* Reset margin top */
+    }
+
+    .btn-container .btns>button {
+        width: 100%;
+        /* Make buttons full width */
+        margin: 0.5em 0;
+        /* Adjust margin for better spacing */
+    }
+
+    .icon-container {
+        height: auto;
+        /* Adjust height to accommodate content */
+    }
+
+    .img-container {
+        height: 40vh;
+        /* Adjust height to accommodate content */
+    }
+
+    #imgPage {
+        width: 80%;
+        /* Adjust width for better fit on smaller screens */
+    }
+
+    .footer {
+        flex-direction: column;
+        /* Stack footer items vertically */
+    }
+
+    .footer h6,
+    .footer p {
+        text-align: center;
+        /* Center-align footer text */
+        margin: 0.5em 0;
+        /* Adjust margin for better spacing */
+    }
+}

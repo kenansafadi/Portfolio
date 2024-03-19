@@ -16,7 +16,6 @@ body {
 
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -27,6 +26,7 @@ body {
     direction: rtl;
 }
 
+/* 
 
 .navbar ul {
     display: flex;
@@ -36,7 +36,6 @@ body {
     margin-right: 10em;
 
 
-    /* Make the list items display horizontally */
 }
 
 .navbar ul li {
@@ -50,24 +49,70 @@ body {
     text-decoration: none;
     color: #2C2C2C;
     justify-content: space-between;
+} */
+
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0.5em;
+    justify-content: flex-start;
+    margin-right: 2em;
+
 }
 
-.elements-container {
+.navbar ul li {
+    margin-right: 1.8em;
+    margin-top: 0.6em;
+}
+
+.navbar ul li:first-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    font: normal normal normal 25px/37px Heebo;
+    text-decoration: none;
+    color: #2C2C2C;
+}
+
+
+/* .elements-container {
     position: relative;
-    /* Set container as the positioning context */
 }
 
 #profile-image {
     position: absolute;
     top: -3.2em;
     left: 10em;
-}
+} */
 
-h2 {
+/* h2 {
     position: absolute;
     top: -1.5em;
     left: 10em;
     font-family: 'Satisfy', cursive;
+} */
+
+.elements-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    height: auto;
+}
+
+#profile-image {
+    margin-top: -3.2em;
+    margin-left: 1em;
+    /* Adjust as needed to move the profile image up */
+    margin-bottom: 20px;
+    /* Add some margin at the bottom to separate from other content */
+}
+
+.elements-container>h2 {
+    margin-left: 1.5em;
+    margin-top: -25px;
+    /* Adjust as needed to move the h2 element up */
 }
 
 .info-container {
@@ -137,15 +182,34 @@ h2 {
 
 .card-container {
     width: 55%;
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: flex-start;
-    /* Align cards to the start of the row */
     margin: 3em;
     text-align: center;
     gap: 0.8em;
-    margin-bottom: 12em;
+    height: auto;
+}
+
+.card-container .section {
+    background-color: #fdfbfb;
+    height: 50vh;
+    border-radius: 1em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    flex: 1 0 calc(33.33% - 0.8em);
+
+}
+
+.form-container {
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(54, 46, 46);
+    font-family: Heebo, sans-serif;
+    height: 80vh;
+    overflow: hidden;
 }
 
 .card-container h1 {
@@ -184,15 +248,7 @@ h2 {
     opacity: 1;
 }
 
-.card-container div {
-    background-color: #fdfbfb;
-    height: 50vh;
-    border-radius: 1em;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    flex: 1 0 calc(33.33% - 0.8em);
 
-    /* Each div takes one-third of the available space */
-}
 
 .card-container img {
     width: 100%;
@@ -217,20 +273,7 @@ h2 {
 
 
 
-.form-container {
-    display: flex;
-    /* flex-direction: column;
-    align-items: center; */
-    flex-direction: row;
-    /* Change the flex direction to row */
-    align-items: center;
-    margin-top: 15em;
-    justify-content: center;
-    background-color: rgb(54, 46, 46);
-    font-family: Heebo, sans-serif;
-    height: 80vh;
-    overflow: hidden;
-}
+
 
 
 .form-container i {
@@ -388,29 +431,147 @@ input[type="submit"] {
     font: normal normal 300 20px/29px Heebo;
 }
 
+
+
 @media (max-width: 480px) {
-    .card-container {
-        width: 80%;
+    .container {
+        width: 100%;
     }
 
-    .card-container img {
-        width: 80%;
-        height: auto;
-        max-height: 40%;
-        margin-bottom: 0.8em;
+    .header {
+        height: 3em;
 
+    }
+
+
+    .navbar ul {
+        margin-right: 0.5em;
+    }
+
+
+    .navbar ul li a {
+        font-size: 0.6em;
+    }
+
+    .elements-container {
+        width: 100%;
+
+    }
+
+    #profile-image {
+        width: 3em;
+        height: 2em;
+        margin-bottom: -0.5em;
+        /* Adjust as needed to move the profile image up */
+    }
+
+    .elements-container>h2 {
+        font-size: 0.8em;
+        margin-bottom: 0;
+        /* Remove any existing margin-bottom */
+        margin-top: -3em;
+        /* Adjust as needed to move the h2 element up */
+    }
+
+    .section .btn button {
+        width: 40%;
+    }
+
+    .info-container>h1 {
+        font-size: 1.5em;
+    }
+
+    .btn-container .btns button {
+        width: 100%;
     }
 
     .text-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     .text-container p {
         width: auto;
         max-width: 80%;
         font: normal normal normal 15px/21px Heebo;
+    }
+
+    .form-container i {
+        font-size: 10em;
+    }
+
+    .myform {
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    .myform>input[type="text"],
+    .myform>input[type="email"],
+    .myform textarea#free-text {
+        background-color: white;
+        width: 80%;
+    }
+
+    .myform>input[type="submit"] {
+
+        width: 40%;
+    }
+
+    .myform .field {
+        font-size: 12px;
+    }
+
+    .contact-text h2,
+    .contact-text p {
+        text-align: justify;
+    }
+
+    .contact-text p {
+        width: 80%;
+    }
+
+    .links {
+        padding: 1em;
+    }
+
+    .links .social-icon {
+        width: 15%;
+        height: 40%;
+        margin: 2em 0.5em;
+    }
+
+    .links .social-icon i {
+        font-size: 1.5em;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .card-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+@media (max-width: 360px) {
+    h2 {
+        display: none;
     }
 }
